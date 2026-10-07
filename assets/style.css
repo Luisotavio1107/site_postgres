@@ -1,0 +1,49 @@
+:root{--tinta:#14213D;--fundo:#F7F7F4;--laranja:#FF5A1F;--cinza:#5B6475;--linha:#E1E3E8;--ok:#1B7F4B}
+*{box-sizing:border-box}
+body{margin:0;font:400 1rem/1.5 Barlow,system-ui,sans-serif;color:var(--tinta);background:var(--fundo)}
+h1,h2,h3,.logo{font-family:'Barlow Condensed',sans-serif;font-weight:800;line-height:1.05;margin:0 0 .5rem}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--laranja);outline-offset:2px}
+.topo{display:flex;justify-content:space-between;align-items:center;padding:1rem 5vw;background:var(--tinta);color:#fff;position:sticky;top:0;z-index:5;flex-wrap:wrap;gap:.5rem}
+.logo{font-size:1.9rem;text-decoration:none;letter-spacing:.02em}.logo span{color:var(--laranja);margin-left:.15em}
+.topo nav{display:flex;gap:1.25rem;align-items:center;font-weight:500;flex-wrap:wrap}
+.topo nav a{text-decoration:none}.topo nav a:hover{color:var(--laranja)}
+.carrinho b{background:var(--laranja);color:#fff;border-radius:99px;padding:.05rem .55rem;margin-left:.25rem}
+.hero{background:var(--tinta);color:#fff;padding:5rem 5vw 6rem;clip-path:polygon(0 0,100% 0,100% 88%,0 100%);margin-bottom:-2rem}
+.hero h1{font-size:clamp(3rem,10vw,7rem);max-width:12ch;text-transform:uppercase}
+.hero p{max-width:40ch;font-size:1.2rem;color:#C9CFDD}
+.btn{display:inline-block;background:var(--laranja);color:#fff;border:0;padding:.8rem 1.6rem;font:600 1rem Barlow,sans-serif;border-radius:4px;text-decoration:none;cursor:pointer}
+.btn:hover{background:#E04A12}.btn.pequeno{padding:.55rem 1rem;font-size:.9rem;width:100%}
+.conteudo{padding:3rem 5vw;max-width:1200px;margin:0 auto}
+.conteudo h1{font-size:2.8rem}
+.filtros{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:2rem}
+.filtros a{padding:.4rem 1rem;border:1.5px solid var(--tinta);border-radius:99px;text-decoration:none;font-weight:500}
+.filtros a.on,.filtros a:hover{background:var(--tinta);color:#fff}
+.grade{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:1.5rem}
+.card{background:#fff;border:1px solid var(--linha);border-radius:6px;overflow:hidden;display:flex;flex-direction:column}
+.foto{display:flex;align-items:center;justify-content:center;font-size:4.5rem;height:180px;text-decoration:none}
+.foto.grande{font-size:9rem;height:380px;border-radius:6px}
+.info{padding:1rem;display:flex;flex-direction:column;gap:.35rem;flex:1}
+.info small,.detalhe small{color:var(--cinza);font-weight:500}
+.info h3{font-size:1.4rem}.info h3 a{text-decoration:none}
+.preco{font-weight:600;font-size:1.2rem;margin:0}.preco.grande{font-size:2rem}
+.info form{margin-top:auto;padding-top:.5rem}
+.detalhe{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+.nota{color:var(--cinza);font-size:.95rem}
+.tabela{width:100%;border-collapse:collapse;background:#fff;margin:1rem 0}
+.tabela td{padding:.9rem 1rem;border-bottom:1px solid var(--linha)}
+.qtd{display:flex;align-items:center;gap:.6rem}
+.qtd button{width:2rem;height:2rem;border:1.5px solid var(--tinta);background:#fff;border-radius:4px;cursor:pointer;font-size:1.1rem}
+.link{background:none;border:0;color:var(--cinza);text-decoration:underline;cursor:pointer;font:inherit}
+.total{font-size:1.4rem;text-align:right}
+.form{max-width:460px}.form form{display:grid;gap:1rem;margin:1.5rem 0}
+.form label{display:grid;gap:.3rem;font-weight:500}
+.form input{padding:.7rem;border:1.5px solid var(--linha);border-radius:4px;font:inherit}
+.erro{background:#FDECEA;color:#9B1C1C;padding:.7rem 1rem;border-radius:4px}
+.sucesso{background:#E6F4EC;color:var(--ok);padding:.7rem 1rem;border-radius:4px}
+.pedido{background:#fff;border:1px solid var(--linha);border-radius:6px;padding:1rem 1.25rem;margin:1rem 0}
+.pedido small{font:400 .9rem Barlow;color:var(--cinza);margin-left:.5rem}
+.pedido ul{padding-left:1.2rem}
+.rodape{background:var(--tinta);color:#C9CFDD;padding:2.5rem 5vw;margin-top:3rem}.rodape strong{color:#fff;font-family:'Barlow Condensed';font-size:1.5rem}
+@media(max-width:720px){.detalhe{grid-template-columns:1fr}.foto.grande{height:240px;font-size:6rem}.tabela td{padding:.6rem .4rem;font-size:.9rem}}
+@media(prefers-reduced-motion:no-preference){.btn,.card{transition:background .15s,transform .15s}.card:hover{transform:translateY(-3px)}}
